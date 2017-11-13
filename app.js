@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var path = require('path');
 var nunjucks = require('nunjucks');
+var routes = require('./Routes')
 
 app.use(express.static(path.join(__dirname, '/public'))); 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,9 +17,7 @@ app.set('view engine', 'html');
 
 app.engine('html', nunjucks.render);
 
-// app.listen(3000, function () {
-//         console.log('Server is listening on port 3000!');
-//     });
+app.use('/', routes);
 
 models.User.sync({force: true})
 .then(function () {

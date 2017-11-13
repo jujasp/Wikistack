@@ -35,6 +35,18 @@ var User = db.define('user', {
     }
 });
 
+var route =  db.define('route', {
+    //firstname: '/wiki/',
+    urlTitle: Sequelize.STRING,
+}, {
+    getterMethods: {
+        route() {
+            return '/wiki/' + this.urlTitle;
+        }
+    }
+}
+)
+
 module.exports = {
   Page: Page,
   User: User,
