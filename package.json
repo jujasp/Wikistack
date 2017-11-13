@@ -1,0 +1,32 @@
+{
+  "name": "wikistack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -e html,js,css" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jujasp/Wikistack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jujasp/Wikistack/issues"
+  },
+  "homepage": "https://github.com/jujasp/Wikistack#readme",
+  "devDependencies": {
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "nunjucks": "^3.0.1",
+    "pg": "^7.4.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.22.6"
+  }
+}
